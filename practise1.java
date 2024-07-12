@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class practise1 {
     public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
         String[] name = new String[5];
         int[] rnos; //Declaration of array, roll no array is getting created and the variable is stored in the stack memory
         rnos = new int[5]; //Creation of the object, here object is created in the memory(heap).
@@ -11,7 +14,14 @@ public class practise1 {
 
         for(int i = 0; i < rnos.length; i++){
             rnos[i] = i+1;
-            System.out.print(rnos[i]);
+        }
+
+        for(int i = 0; i < name.length; i++){
+            name[i] = sc.next();
+        }
+
+        for(String value : name){
+            System.out.println(value);
         }
     }
 }
